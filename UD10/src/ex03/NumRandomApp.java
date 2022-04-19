@@ -2,6 +2,11 @@ package ex03;
 
 import excepcionesCustom.ExcepcionesPropias;
 
+/**
+ * Clase para utilizar la Excepcion de numero par e impar.
+ * @author marcp
+ *
+ */
 public class NumRandomApp {
 
 	public static void main(String[] args) throws ExcepcionesPropias {

@@ -2,6 +2,11 @@ package ex02;
 
 import excepcionesCustom.ExcepcionesPropias;
 
+/**
+ * Clase para lanzar un objeto de la Excepcion Propia
+ * @author marcp
+ *
+ */
 public class ExcpecionApp {
 
 	public static void main(String[] args) {

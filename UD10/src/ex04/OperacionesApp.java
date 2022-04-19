@@ -3,10 +3,16 @@ package ex04;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * Clase main para verificar con el try y catch el funcionamiento de las excepciones y operaciones
+ * @author marcp
+ *
+ */
 public class OperacionesApp {
 
 	public static void main(String[] args) {
-
+		
+		// Declaracion de variables
 		Scanner sc = new Scanner(System.in);
 		int num_1 = 0;
 		int num_2 = 0;
@@ -39,9 +45,11 @@ public class OperacionesApp {
 				num_1 = sc.nextInt();
 				System.out.println("Valor numero 2 (entero): ");
 				num_2 = sc.nextInt();
-
+				
+				// Creamos el primer objeto
 				Operaciones op1 = new Operaciones(num_1, num_2);
-
+				
+				// Operaciones con los dos parametros
 				op1.suma();
 				op1.resta();
 				op1.multiplicacion();
@@ -60,9 +68,11 @@ public class OperacionesApp {
 			try {
 				System.out.println("Valor numero (entero): ");
 				num = sc.nextInt();
-
+				
+				// Creamos el segundo objeto
 				Operaciones op2 = new Operaciones(num);
-
+				
+				// Hacemos las operaciones con el valor introducido.
 				op2.raizCuadrada();
 				op2.raizCubica();
 			} catch (ArithmeticException e) {

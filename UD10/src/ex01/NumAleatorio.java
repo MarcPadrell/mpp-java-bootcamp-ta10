@@ -1,5 +1,10 @@
 package ex01;
 
+/**
+ * Clase que nos genera un numero aleatorio con los límites establecidos
+ * @author marcp
+ *
+ */
 public class NumAleatorio {
 	
 	private final int LIMITE_INF = 1;

@@ -1,5 +1,10 @@
 package excepcionesCustom;
 
+/**
+ * Clase para crear nuestras propias Excepciones
+ * @author marcp
+ *
+ */
 public class ExcepcionesPropias extends Exception {
 
 	private String mensaje;
@@ -14,7 +19,10 @@ public class ExcepcionesPropias extends Exception {
 		super();
 		this.numero_random = numero_random;
 	}
-
+	
+	/**
+	 * Excepcion por si un numero es par o impar
+	 */
 	public String getMessage() {
 
 		if (this.numero_random % 2 == 0) {

@@ -1,5 +1,10 @@
 package ex04;
 
+/**
+ * Clase que nos realiza todas las operaciones dependiendo del constructor.
+ * @author marcp
+ *
+ */
 public class Operaciones {
 
 	private int numero1;
@@ -16,7 +21,8 @@ public class Operaciones {
 		this.numero1 = numero1;
 		this.numero2 = numero2;
 	}
-
+	
+	// Creamos los diferentes metodos con las operaciones desadas
 	public void suma() {
 
 		System.out.println("Suma: " + (numero1 + numero2));

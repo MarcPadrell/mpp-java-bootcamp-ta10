@@ -16,43 +16,50 @@ public class Password {
 	}
 
 	// Constructor creando la password aleatoria con la longitud indicada.
-	public Password(int longitud, String[] array) {
+	public Password(int longitud, char[] array_c) {
 		this.longitud = longitud;
-		this.contraseña = passwordRandom(longitud, array);
+		this.contraseña = passwordRandom(longitud, array_c);
 	}
 
 	/**
 	 * Función para generar una contraseña aleatoria con la longitud
 	 */
-	public String passwordRandom(int longitud, String[] array_contra) {
+	public String passwordRandom(int longitud, char[] array_c) {
 
 		String banco = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
 		String contra = "";
 		String character = "";
+		char c;
 
 		for (int i = 0; i < longitud; i++) {
-			character = "" + banco.charAt((int) (Math.random() * 62));
+			c = banco.charAt((int) (Math.random() * 62));
+			character = "" + c;
 			contra += character;
-			array_contra[i] = contra;
-			character = "";
+			array_c[i] = c;
 		}
 
 		return contra;
 	}
-
-	public boolean esFuerte(String[] array) {
+	
+	/**
+	 * Metodo para verificar si una password es fuerte o no
+	 * @param array_c
+	 * @return
+	 */
+	public boolean esFuerte(char[] array_c) {
 
 		int cont_mayus = 0;
 		int cont_minus = 0;
 		int cont_num = 0;
 
-		for (int i = 0; i < this.longitud; i++) {
-			if (array[i].equals(array[i].toUpperCase())) {
-				cont_mayus++;
-			} else if (array[i].equals(array[i].toLowerCase())) {
+		for (int i = 0; i < array_c.length; i++) {
+			Character a = array_c[i];
+			if (a >= 48 && a <= 57) {
+				cont_num++;
+			} else if (a == Character.toLowerCase(a)) {
 				cont_minus++;
 			} else {
-				cont_num++;
+				cont_mayus++;
 			}
 		}
 
@@ -63,7 +70,8 @@ public class Password {
 		}
 
 	}
-
+	
+	// Getters i Setters
 	public int getLongitud() {
 		return longitud;
 	}

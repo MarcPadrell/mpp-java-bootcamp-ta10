@@ -3,6 +3,11 @@ package ex01;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * App para adivinar el numero aleatorio generado, verificando el funcionamiento con try y catch.
+ * @author marcp
+ *
+ */
 public class NumAleatorioApp {
 
 	public static void main(String[] args) {
@@ -13,7 +18,8 @@ public class NumAleatorioApp {
 		int numero_escrito = 0;
 		int contador = 0;
 		boolean acertado = false;
-
+		
+		// Bucle del cual no salimos hasta que acierte el numero.
 		do {
 
 			try {
